@@ -1,0 +1,18 @@
+/* ===========================
+   PixelForge Main JS
+   Handles: Preloader fade-out
+   =========================== */
+
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  if (!preloader) return;
+
+  // Fade out preloader smoothly
+  preloader.style.transition = "opacity 0.8s ease";
+  preloader.style.opacity = "0";
+
+  // Remove it after fade completes
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 800);
+});
